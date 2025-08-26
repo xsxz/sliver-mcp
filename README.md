@@ -1,6 +1,6 @@
 # sliver-mcp
 
-Sliver-MCP is a both MCP server for Sliver Server. It was tested on v1.5.42.
+Sliver-MCP is an MCP server for Sliver Server, which implements a multiplayer client, adjusted to use with MCP-Go. Functionality was tested with `v1.5.43`.
 
 ## Compiling from source
 ```
@@ -35,14 +35,17 @@ sliver > http --lhost 192.168.3.4 --lport 34443
 ---
 
 ## TODO: 
-- stdio support
-- 
+- stdio transport
+- authn/authz for HTTP transport
 - sending/retrieving tasks for beacons in async fashion 
 
 ## skipped features:
 - Armory, crackstations, cursed, shell, websites,  windows-specific features (execute assembly/shellcode/sideload), and some other features (fs: upload/download/cat, loot, screenshot, generating payloads). Either I was too lazy to tinker with these, or they are just not well suited for interaction via LLM.
 - Most beacon async commands and features, related to beacons. At the current stage, this PoC focuses on interactions with interactive sessions only.
-- Portfwd, reverse portfwd, socks. I hadn't much luck with them, looks like per v1.5.42, these don't always behave as expected.
+- Portfwd, reverse portfwd, socks. I hadn't much luck with them, looks like per v1.5.43, these don't always behave as expected.
 
 ## Reference links
+https://github.com/mark3labs/mcp-go
+https://github.com/BishopFox/sliver/tree/v1.5.x/master
+
 https://sliver.sh/docs?name=Custom%20Clients
